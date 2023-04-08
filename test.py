@@ -1,3 +1,5 @@
+# it is used to solve the cube. It contains a virtual cube which we can scramble by keyboard buttons and solves it using python's kociemba module. It uses python's pygame module.
+
 import kociemba
 import cube
 import pygame
