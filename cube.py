@@ -1,3 +1,5 @@
+#This is the cube class. This class contains Horizontal, Vertical and Face rotation of the cube.
+
 import pygame
 
 pygame.init()
