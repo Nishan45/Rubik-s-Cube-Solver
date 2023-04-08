@@ -1,3 +1,7 @@
+'''This is used for animation of the cube using matplotlib in 3 dimension.It will display each steps to solve the rubik's cube and the solution will also be written there
+at the top of the figure '''
+
+
 from mpl_toolkits.mplot3d import Axes3D
 from mpl_toolkits.mplot3d.art3d import Poly3DCollection
 import matplotlib.pyplot as plt
@@ -14,6 +18,7 @@ moves={}
 sequence=['1','2','3','4','5','6']
 
 def get_cube(cub):
+   # this funtion is used to copy the cube
     c=[]
     for i in range(6):
             l1=[]
@@ -26,6 +31,9 @@ def get_cube(cub):
     return c
 
 def stringfy(cub):
+    '''this function create a string of the cube which is needed since python's kociemba algorithm takes string as input so we need to crate a string of patterns of
+    the cube'''
+    
     s=""
     n=len(cub[0][1])
     
@@ -59,6 +67,7 @@ def stringfy(cub):
 
 
 def get_cube_pattern(sol):
+  # this retunrs the sol in the form of list 
     patterns=[]
     for i in range(len(sol)):
         if sol[i]!=' ' and sol[i]!='2' and sol[i]!='3' and sol[i]!="'":
@@ -188,6 +197,8 @@ def solve_cube(cub):
               
 text='' 
 
+
+# drawing code starts from here
 def draw_edges(x,y,z,x1,y1,z1,ax):
        
     verts = [list(zip(x,y,z))]
