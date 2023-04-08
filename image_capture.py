@@ -1,3 +1,5 @@
+# this is used to capture the scrambled cube using opem cv.
+
 import cv2
 import cube
 import test
